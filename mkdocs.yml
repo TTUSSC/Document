@@ -1,10 +1,41 @@
 site_name: TTUSSC Docs
+repo_url: https://github.com/TTUSSC/Document
+copyright: Copyright &copy; 2023 TTUSSC
+nav:
+  - "首頁":
+    - index.md
+  - "部落格":
+    - blog/index.md
+  - "法規":
+    - "大同大學":
+      - laws/clubs_law.md
+      - laws/clubs_teachers.md
+      - laws/clubs_finance.md
+    - "科學開源服務社":
+      - laws/ssc_laws.md
+  - "標籤":
+    - tags.md
+
+plugins:
+  - tags:
+      tags_file: tags.md
+  - search:
+      lang: zh
+  - blog:
+      post_date_format: medium
+      post_url_format: "{categories}/{slug}"
+      post_url_max_categories: 2
+
 theme:
   name: material
   language: zh-TW
-  logo: assets/SSC_logo.png
-  favicon: images/favicon.png
+  logo: assets/images/SSC_logo.png
+  favicon: assets/images/favicon.ico
 
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.path
 
   # 顏色
   palette:
@@ -13,14 +44,14 @@ theme:
       primary: light blue
       toggle:
         icon: material/brightness-7 
-        name: Switch to dark mode
+        name: 黑夜模式
 
     # Palette toggle for dark mode
     - scheme: slate
       primary: light blue
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: 白日模式
 
 extra:
   alternate:
@@ -30,4 +61,7 @@ extra:
     - name: 中文
       link: /zh-TW/
       lang: zh-TW
+  social:
+    - icon: fontawesome/brands/instagram
+      link: https://instagram/ttussc_
 
