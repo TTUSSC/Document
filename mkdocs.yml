@@ -45,9 +45,22 @@ plugins:
       separator: '[\s\u200b\-]'
 
   - blog:
+      blog_dir: blog
+      blog_toc: true
+      
       post_date_format: medium
       post_url_format: "{categories}/{slug}"
-      post_url_max_categories: 2
+
+      archive_toc: true
+      archive: true
+      archive_name: 封存
+
+      categories_toc: true
+      categories_name: 分類
+
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      pagination_keep_content: true
+      draft_if_future_date: true
   
   # for blog posts
   - rss:
@@ -56,11 +69,11 @@ plugins:
         as_creation: date
       categories:
         - categories
-        - tags 
+        - tags
 
 theme:
   name: material
-  language: zh-TW
+  language: zh
   logo: assets/images/SSC_logo.png
   favicon: assets/images/favicon.ico
 
@@ -100,6 +113,7 @@ extra:
     - name: 中文
       link: /zh-TW/
       lang: zh-TW
+
   social:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/ttussc_
@@ -109,14 +123,14 @@ extra:
       name: Discord
       
   tags:
-    "文件": docs
+    docs: "文件"
     "模板": template
     "Arduino": arduino
     "人工智慧": ai
-    "會議記錄": minutes
-    "法規與規範": laws
-    "2023 科學探索家": 2023camp
-    "大同大學": ttu
+    minutes: "會議記錄"
+    laws: "法規"
+    2023camp: "2023 科學探索家"
+    ttu: "大同大學"
 
 
 # markdown 渲染選項
