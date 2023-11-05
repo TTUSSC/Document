@@ -24,7 +24,7 @@ nav:
       - minutes/112/20230911.md
       - minutes/112/20230920.md
       - minutes/112/20231006.md
-  - "社團法規&規範":
+  - "社團法規":
     - laws/index.md
     - "大同大學":
       - laws/clubs_law.md
@@ -35,6 +35,9 @@ nav:
       - laws/ssc_laws.md
       - laws/ssc_finance.md
       - laws/ssc_asset.md
+    - "修定紀錄":
+      - laws/commits/index.md
+      - laws/commits/20230914_ssc_laws.md
   - "標籤":
     - tags.md
 
