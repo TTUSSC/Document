@@ -7,6 +7,7 @@ categories:
   - 幹部訓練
 tags:
   - 大同大學
+  - 幹部訓練
 draft: false
 slug: traing2
 ---

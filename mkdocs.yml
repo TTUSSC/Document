@@ -33,6 +33,8 @@ nav:
       - laws/clubs_subsidy.md
     - "科學開源服務社":
       - laws/ssc_laws.md
+      - laws/ssc_finance.md
+      - laws/ssc_asset.md
   - "標籤":
     - tags.md
 
@@ -101,9 +103,21 @@ theme:
     #previous: fontawesome/solid/angle-left
     #next: fontawesome/solid/angle-right
     tag:
+      default: material/tag
       docs: material/file
       laws: material/scale-balance
-      minutes: material/file
+      minutes: fontawesome/solid/file-lines
+      ttu: material/school
+      2023camp: fontawesome/solid/campground
+      arduino: simple/arduino
+      ai: material/brain
+      git: simple/git
+      linux: fontawesome/brands/linux
+      c: material/language-c
+      cpp: material/language-cpp
+      python: material/language-python
+      md: material/language-markdown
+      membertrain: material/google-classroom
 
 extra:
   alternate:
@@ -123,14 +137,21 @@ extra:
       name: Discord
       
   tags:
-    docs: "文件"
+    "文件": docs
     "模板": template
     "Arduino": arduino
     "人工智慧": ai
-    minutes: "會議記錄"
-    laws: "法規"
-    2023camp: "2023 科學探索家"
-    ttu: "大同大學"
+    "會議記錄": minutes
+    "法規": laws
+    "2023 科學探索家": 2023camp
+    "大同大學": ttu
+    "Git": git
+    "Linux": linux
+    "C語言": c
+    "C++": cpp
+    "Python": python
+    "Markdown": md
+    "幹部訓練": membertrain
 
 
 # markdown 渲染選項
