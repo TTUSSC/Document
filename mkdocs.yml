@@ -1,16 +1,36 @@
-site_name: TTUSSC Docs
+site_name: TTUSSC
 repo_url: https://github.com/TTUSSC/Document
 copyright: Copyright &copy; 2023 TTUSSC
+site_description: 大同大學科學開源服務社線上文件公開網站
 nav:
   - "首頁":
     - index.md
   - "部落格":
     - blog/index.md
-  - "法規":
+  - "會議記錄":
+    - minutes/index.md
+    - "111學年":
+      - minutes/111/20230423.md
+      - minutes/111/20230615.md
+      - minutes/111/20230618.md
+      - minutes/111/20230624.md
+      - minutes/111/20230630.md
+    - "112學年":
+      - minutes/112/20230708.md
+      - minutes/112/20230717.md
+      - minutes/112/20230806.md
+      - minutes/112/20230826.md
+      - minutes/112/20230904.md
+      - minutes/112/20230911.md
+      - minutes/112/20230920.md
+      - minutes/112/20231006.md
+  - "社團法規&規範":
+    - laws/index.md
     - "大同大學":
       - laws/clubs_law.md
       - laws/clubs_teachers.md
       - laws/clubs_finance.md
+      - laws/clubs_subsidy.md
     - "科學開源服務社":
       - laws/ssc_laws.md
   - "標籤":
@@ -19,12 +39,24 @@ nav:
 plugins:
   - tags:
       tags_file: tags.md
+      
   - search:
       lang: zh
+      separator: '[\s\u200b\-]'
+
   - blog:
       post_date_format: medium
       post_url_format: "{categories}/{slug}"
       post_url_max_categories: 2
+  
+  # for blog posts
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
 
 theme:
   name: material
@@ -52,6 +84,13 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 白日模式
+  icon:
+    #previous: fontawesome/solid/angle-left
+    #next: fontawesome/solid/angle-right
+    tag:
+      docs: material/file
+      laws: material/scale-balance
+      minutes: material/file
 
 extra:
   alternate:
@@ -63,5 +102,85 @@ extra:
       lang: zh-TW
   social:
     - icon: fontawesome/brands/instagram
-      link: https://instagram/ttussc_
+      link: https://instagram.com/ttussc_
+      name: Instagram
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/dEPdDmSr
+      name: Discord
+      
+  tags:
+    "文件": docs
+    "模板": template
+    "Arduino": arduino
+    "人工智慧": ai
+    "會議記錄": minutes
+    "法規與規範": laws
+    "2023 科學探索家": 2023camp
+    "大同大學": ttu
 
+
+# markdown 渲染選項
+markdown_extensions:
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # Annotations
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+
+  # Buttons
+  - attr_list
+
+  # Code Blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
+  # Data Tables
+  - tables
+
+  # Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # Footnotes
+  - footnotes
+
+  #Formating
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # Icon, Emojis
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # Images
+  - attr_list
+  - md_in_html
+
+  # Lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - toc
+  - extra
+  - sane_lists
+  - meta
+  - pymdownx.details
+  - pymdownx.superfences
