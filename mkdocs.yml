@@ -51,6 +51,14 @@ nav:
       - minutes/113/20240815.md
       - minutes/113/20240822.md
       - minutes/113/20240830.md
+  - "財務":
+    - finance/index.md
+    - "113年":
+      - finance/113/08.md
+      - finance/113/09.md
+      - finance/113/10.md
+      - finance/113/11.md
+      - finance/113/12.md
   - "社團法規":
     - laws/index.md
     - "大同大學":
